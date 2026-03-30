@@ -59,6 +59,7 @@ builder.Services.AddLogging();
 
 var app = builder.Build();
 
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 app.UseRateLimiting();
 
 app.UseAuthentication();
